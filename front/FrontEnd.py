@@ -24,8 +24,10 @@ class FrontEnd:
     def menu(self, args):
             self.stdscr = curses.initscr()
             self.stdscr.border()
+
+            #checking for appropriate screensize
             y,x = self.stdscr.getmaxyx()
-            if (y < 20 and x < 50):
+            if (y < 20 and x < 80):
                 raise CLI_Audio_Screen_Size_Exception("screen is to small")
             else:
                 self.stdscr.addstr(0,0, "cli-audio",curses.A_REVERSE)

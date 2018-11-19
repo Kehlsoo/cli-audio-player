@@ -8,6 +8,7 @@ along with file reading errors
 
 '''
 
+#child class of pythons exception class
 class CLI_Audio_Exception(Exception):
     def __init__(self, err):
         self.err = err
